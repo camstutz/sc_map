@@ -3,11 +3,12 @@
  * @author Christian Amstutz
  * @date June 17, 2015
  *
- * @brief
+ * @brief Combines the headers that contain the different structures.
  *
+ * This file should be included to files using sc_map structures.
  */
 
-/*
+ /*
  *  Copyright (c) 2015 by Christian Amstutz
  */
 
