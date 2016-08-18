@@ -16,9 +16,7 @@
 #include "sc_map_iterator.hpp"
 #include "sc_map_config.hpp"
 
-#include "../../sc_analyzer/include/size_analyzer.hpp"
-
-#include "../../modelsim_support/include/modelsim_support.hpp"
+//#include "../../sc_analyzer/include/size_analyzer.hpp"
 
 #include <systemc.h>
 
@@ -501,21 +499,3 @@ typename sc_map_base<range_T, object_T>::object_type*
 
     return (new_sc_object);
 }
-
-//// *****************************************************************************
-//#ifdef MODELSIM_COMPILER
-//
-//template <typename range_T, typename object_T>
-//template <typename data_type>
-//void sc_map_base<key_T, range_T, object_T>::register_signal_modelsim()
-//{
-//    const_container_iterator object_it = objects.begin();
-//    for (; object_it != objects.end(); ++object_it)
-//    {
-//        SC_MTI_REGISTER_CUSTOM_DEBUG(*object_it, data_type::get_max_value_length(), data_type::mti_debug_cb);
-//    }
-//
-//    return;
-//}
-//
-//#endif

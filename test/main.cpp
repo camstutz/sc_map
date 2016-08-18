@@ -1,10 +1,8 @@
-#include "../sc_map/include/sc_map.hpp"
-#include "../sc_analyzer/include/sc_analyzer.hpp"
+#include "../include/sc_map.hpp"
+//#include "../sc_analyzer/include/sc_analyzer.hpp"
 #include "source.hpp"
 #include "sink.hpp"
 //#include "bind_tester.hpp"
-
-#include "sc_delay_tb.hpp"
 
 #include <systemc.h>
 
@@ -12,9 +10,9 @@
 
 int sc_main(int argc, char *agv[])
 {
-    sc_analyzer myAnalyzer;
+//    sc_analyzer myAnalyzer;
 
-    myAnalyzer.register_model_setup_start();
+//    myAnalyzer.register_model_setup_start();
 
     source src1("source1");
     source_square src2("source2");
@@ -190,28 +188,20 @@ int sc_main(int argc, char *agv[])
     sc_trace(fp, signals4, "signal4");
     //sc_trace(fp, bind_signals, "b_signal");
 
-    sc_delay_tb delay_testbench("delay_testbench");
-    sc_trace(fp, delay_testbench.clock, "clock");
-    sc_trace(fp, delay_testbench.in_signal, "in");
-    sc_trace(fp, delay_testbench.out_signal, "delayed");
-    sc_trace(fp, delay_testbench.delay_element.read_ptr, "read_ptr");
-    sc_trace(fp, delay_testbench.delay_element.write_ptr, "write_ptr");
-    sc_trace(fp, delay_testbench.delay_element.signal_received, "received");
-
     std::cout << "\n--- Simulation starts ---\n" << std::endl;
 
-    myAnalyzer.register_model_setup_end();
-    myAnalyzer.register_simulation_start();
+//    myAnalyzer.register_model_setup_end();
+//    myAnalyzer.register_simulation_start();
 
     sc_start(1000, SC_NS);
 
-    myAnalyzer.register_simulation_end();
+//    myAnalyzer.register_simulation_end();
 
     std::cout << "\n--- Simulation ended ---\n" << std::endl;
 
     sc_close_vcd_trace_file(fp);
 
-    myAnalyzer.print_report();
+//    myAnalyzer.print_report();
 
     return(0);
 }

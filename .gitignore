@@ -234,4 +234,4 @@ exclude/
 *.o
 *.d
 
-systemc_helpers_test
+sc_map_test
