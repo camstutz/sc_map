@@ -233,5 +233,6 @@ exclude/
 *.a
 *.o
 *.d
+*.gch
 
 sc_map_test
