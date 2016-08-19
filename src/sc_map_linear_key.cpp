@@ -33,6 +33,8 @@ bool sc_map_linear_key::operator==(const sc_map_key& other_key) const
     const sc_map_linear_key* other_key_linear =
             dynamic_cast<const sc_map_linear_key*>(&other_key);
 
+    // todo: check for successful casting
+
     return (this->X == other_key_linear->X);
 }
 
@@ -41,6 +43,8 @@ bool sc_map_linear_key::operator<(const sc_map_key& other_key) const
 {
     const sc_map_linear_key* other_key_linear =
             dynamic_cast<const sc_map_linear_key*>(&other_key);
+
+    // todo: check for successful casting
 
     return (this->X < other_key_linear->X);
 }
