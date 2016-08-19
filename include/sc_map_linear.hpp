@@ -2,9 +2,6 @@
  * @file sc_map_linear.hpp
  * @author Christian Amstutz
  * @date June 9, 2015
- *
- * @brief
- *
  */
 
 /*
@@ -71,7 +68,8 @@ public:
     typedef typename base::size_type size_type;
 
     /*!
-     * @brief Creates a linear (1D) sc_map with a certain number of elements.
+     * @brief Constructor: Creates a linear (1D) sc_map with a certain number of
+     *        elements.
      *
      * Generates the range of indexes and calls init() function from base class.
      *
@@ -85,8 +83,8 @@ public:
     sc_map_linear(const size_type element_cnt_X, const sc_module_name name, const index_type start_id_X = sc_map_linear_key::default_start_id);
 
     /*!
-     * @brief Creates a linear (1D) sc_map with a certain number of elements and
-     *        configures them.
+     * @brief Constructor: Creates a linear (1D) sc_map with a certain number of
+     *        elements and configures them.
      *
      * Generates the range of indexes and calls init() function from base class.
      * The configuration is passed to the init() function. This configuration
@@ -107,8 +105,8 @@ public:
     sc_map_linear(const size_type element_cnt_X, const sc_module_name name, const config_type& configuration, const index_type start_id_X = sc_map_linear_key::default_start_id);
 
     /*!
-     * @brief Creates a linear (1D) sc_map with elements within a certain
-     *        range.
+     * @brief Constructor: Creates a linear (1D) sc_map with elements within a
+     *        certain range.
      *
      * Generates the range between the start and the end value. Then, calls the
      * init() function from base class.
@@ -121,8 +119,8 @@ public:
     sc_map_linear(const key_type start_key, const key_type end_key, const sc_module_name name);
 
     /*!
-     * @brief Creates a linear (1D) sc_map with elements within a certain range
-     *        and configures them.
+     * @brief Constructor: Creates a linear (1D) sc_map with elements within a
+     *        certain range and configures them.
      *
      * Generates the range between the start and the end value. Then, calls the
      * init() function from base class.
@@ -142,7 +140,8 @@ public:
     sc_map_linear(const key_type start_key, const key_type end_key, const sc_module_name name, const config_type configuration);
 
     /*!
-     * @brief Creates a linear (1D) sc_map according to a specified range.
+     * @brief Constructor: Creates a linear (1D) sc_map according to a specified
+     *        range.
      *
      * Calls init() function from the base class.
      *
@@ -154,8 +153,8 @@ public:
     sc_map_linear(const range_type new_range, const sc_module_name name);
 
     /*!
-     * @brief Creates a linear (1D) sc_map according to a specified range and
-     *        configures them.
+     * @brief Constructor: Creates a linear (1D) sc_map according to a specified
+     *        range and configures them.
      *
      * Calls init() function from the base class.
      * The configuration is passed to the init() function. This configuration
@@ -174,7 +173,7 @@ public:
     sc_map_linear(const range_type new_range, const sc_module_name name, const config_type& configuration);
 
     /*!
-     * @brief Empty destructor.
+     * @brief Destructor: empty
      */
     virtual ~sc_map_linear() {};
 
