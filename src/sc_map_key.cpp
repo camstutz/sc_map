@@ -1,14 +1,11 @@
 /*!
  * @file sc_map_key.cpp
  * @author Christian Amstutz
- * @date May 27, 2015
- *
- * @brief
- *
+ * @date August 19, 2016
  */
 
 /*
- *  Copyright (c) 2015 by Christian Amstutz
+ *  Copyright (c) 2016 by Christian Amstutz
  */
 
 #include "../include/sc_map_key.hpp"
@@ -23,7 +20,7 @@ bool sc_map_key::Comperator::operator()(const sc_map_key& lhs,
 //******************************************************************************
 bool sc_map_key::operator!=(const sc_map_key& other_key) const
 {
-    return *this == other_key;
+    return !(*this == other_key);
 }
 
 //******************************************************************************
