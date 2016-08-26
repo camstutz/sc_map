@@ -2,9 +2,7 @@
  * @file sc_map_key.hpp
  * @author Christian Amstutz
  * @date May 28, 2015
- */
-
-/*
+ *
  *  Copyright (c) 2015 by Christian Amstutz
  */
 
